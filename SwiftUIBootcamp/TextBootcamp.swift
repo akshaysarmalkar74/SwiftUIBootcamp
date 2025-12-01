@@ -131,6 +131,10 @@ struct TextBootcamp: View {
                             
                             Text("Foreground Color")
                                 .foregroundStyle(.red)
+                            
+                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+                                .minimumScaleFactor(0.5)
+                                .frame(width: 300, height: 100)
                         }
                     }
                     
