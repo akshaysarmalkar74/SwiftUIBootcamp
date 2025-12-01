@@ -18,7 +18,7 @@ struct TitleView: View {
             .fontWeight(.semibold)
             .fontDesign(.monospaced)
             .background(
-                Color.yellow
+                Color.main
             )
             .padding(.top, shouldHaveTopPadding ? 10 : 0)
     }
