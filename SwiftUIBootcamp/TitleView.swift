@@ -17,6 +17,7 @@ struct TitleView: View {
             .font(font)
             .fontWeight(.semibold)
             .fontDesign(.monospaced)
+            .multilineTextAlignment(.center)
             .background(
                 Color.main
             )
