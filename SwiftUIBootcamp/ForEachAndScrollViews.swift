@@ -8,8 +8,31 @@
 import SwiftUI
 
 struct ForEachAndScrollViews: View {
+    private let colors: [Color] = [
+        .red,
+        .blue,
+        .yellow,
+        .green,
+        .purple,
+    ]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            TitleView(title: "For Each & ScrollViews", shouldHaveTopPadding: true)
+            
+            ScrollView(.vertical, showsIndicators: false) {
+                ForEach(1..<10) { index in
+                    RoundedRectangle(cornerRadius: 10)
+                        .frame(height: 100)
+                        .foregroundColor(randomColor())
+                }
+            }
+        }
+        .padding(.horizontal)
+    }
+    
+    private func randomColor() -> Color {
+        colors.randomElement() ?? .black
     }
 }
 
