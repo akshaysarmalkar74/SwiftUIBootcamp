@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct PickerBootcamp: View {
+    @State private var age = 18
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            TitleView(title: "Picker Bootcamp", shouldHaveTopPadding: true)
+            
+            VStack {
+                Picker("Select your age", selection: $age) {
+                    ForEach(18..<90, id: \.self) { idx in
+                        Text("\(idx)")
+                            .tag(idx)
+                    }
+                }
+                .pickerStyle(.menu)
+            }
+        }
     }
 }
 
