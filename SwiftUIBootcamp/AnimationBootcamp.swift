@@ -17,7 +17,7 @@ struct AnimationBootcamp: View {
                 .fontWeight(.bold)
             
             Button {
-                withAnimation {
+                withAnimation(Animation.easeIn.repeatCount(5, autoreverses: false).delay(1.0)) {
                     isAnimating.toggle()
                 }
                 
