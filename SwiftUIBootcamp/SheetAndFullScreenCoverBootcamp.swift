@@ -30,6 +30,7 @@ struct RedSheetView: View {
             }
             .padding()
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
